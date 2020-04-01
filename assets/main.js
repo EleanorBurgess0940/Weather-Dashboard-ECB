@@ -29,7 +29,7 @@ $(document).ready(function() {
 });
 
 var apiKey = "3c6fea3acc237375fd52d7b6d98475c0";
-var cityName = "Philadelphia";
+var cityName = "Tokyo";
 var oneDayQueryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
 var fiveDayQueryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=${apiKey}`;
 
@@ -62,14 +62,32 @@ $.ajax({
 }).then(function(response) {
   console.log(response);
   $("#tempTwo").html("Temperature: " + response.list[0].main.temp);
-  $("#tempThree").html("Temperature: " + response.list[1].main.temp);
-  $("#tempFour").html("Temperature: " + response.list[2].main.temp);
-  $("#tempFive").html("Temperature: " + response.list[3].main.temp);
-  $("#tempSix").html("Temperature: " + response.list[4].main.temp);
-
   $("#humidTwo").html("Humidity: " + response.list[0].main.humidity + "%");
-  $("#humidThree").html("Humidity: " + response.list[1].main.humidity + "%");
-  $("#humidFour").html("Humidity: " + response.list[2].main.humidity + "%");
-  $("#humidFive").html("Humidity: " + response.list[3].main.humidity + "%");
-  $("#humidSix").html("Humidity: " + response.list[4].main.humidity + "%");
+  var iconCodeTwo = response.list[0].weather[0].icon;
+  var iconURL = `https://openweathermap.org/img/wn/${iconCodeTwo}@2x.png`;
+  $("#iconCodeTwo").attr("src", iconURL);
+
+  $("#tempThree").html("Temperature: " + response.list[8].main.temp);
+  $("#humidThree").html("Humidity: " + response.list[8].main.humidity + "%");
+  var iconCodeThree = response.list[8].weather[0].icon;
+  var iconURL = `https://openweathermap.org/img/wn/${iconCodeThree}@2x.png`;
+  $("#iconCodeThree").attr("src", iconURL);
+
+  $("#tempFour").html("Temperature: " + response.list[16].main.temp);
+  $("#humidFour").html("Humidity: " + response.list[16].main.humidity + "%");
+  var iconCodeFour = response.list[16].weather[0].icon;
+  var iconURL = `https://openweathermap.org/img/wn/${iconCodeFour}@2x.png`;
+  $("#iconCodeFour").attr("src", iconURL);
+
+  $("#humidFive").html("Humidity: " + response.list[24].main.humidity + "%");
+  $("#tempFive").html("Temperature: " + response.list[24].main.temp);
+  var iconCodeFive = response.list[24].weather[0].icon;
+  var iconURL = `https://openweathermap.org/img/wn/${iconCodeFive}@2x.png`;
+  $("#iconCodeFive").attr("src", iconURL);
+
+  $("#tempSix").html("Temperature: " + response.list[32].main.temp);
+  $("#humidSix").html("Humidity: " + response.list[32].main.humidity + "%");
+  var iconCodeSix = response.list[32].weather[0].icon;
+  var iconURL = `https://openweathermap.org/img/wn/${iconCodeSix}@2x.png`;
+  $("#iconCodeSix").attr("src", iconURL);
 });
