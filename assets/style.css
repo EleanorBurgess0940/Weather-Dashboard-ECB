@@ -4,6 +4,17 @@ img {
 h2 {
   text-align: center;
 }
-nav {
+header {
   width: 100%;
+  text-align: center;
+  background-color: lightskyblue;
+  border-bottom: 10px solid black;
+}
+
+.container {
+  background-color: white;
+}
+
+body {
+  background-color: blue;
 }

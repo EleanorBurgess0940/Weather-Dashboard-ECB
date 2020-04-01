@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -26,21 +28,81 @@
   </header>
 
   <body>
-    <card>Search For a City</card>
+    <div class="container">
+      <div class="col-3 float-left">
+        <h1>Search for a City</h1>
+        <form>
+          <input type="text" />
+          <button>Search</button>
+        </form>
+        <br />
+        <h2>Recently Searched</h2>
+        <h4>one</h4>
+        <h4>two</h4>
+        <h4>three</h4>
+        <br />
+        <h2>Popular Destinations</h2>
+        <h4>Miami</h4>
+        <h4>Philadelphia</h4>
+        <h4>Paris</h4>
+        <h4>London</h4>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-8">
+        <div class="card">
+          <h3 id="date"></h3>
+          <h1>Todays Weather in City</h1>
+          <br />
+          <br />
+          <!--Image of the weather-->
+          <h2>Temperture:</h2>
+          <h4>Humidity:</h4>
+          <h4>windSpeed:</h4>
+          <h4>UV index:</h4>
+        </div>
+        <br />
+        <div class="col-12">
+          <h1>Future Forecast</h1>
+          <div class="col-2 float-left">
+            <h4 id="oneday"></h4>
+            <!--Icon-->
+            <p>Temperture:</p>
+            <p>Humidity:</p>
+          </div>
+          <div class="col-2 float-left">
+            <h4 id="twoday"></h4>
+            <!--Icon-->
+            <p>Temperture:</p>
+            <p>Humidity:</p>
+          </div>
+          <div class="col-2 float-left">
+            <h4 id="threeday"></h4>
+            <!--Icon-->
+            <p>Temperture:</p>
+            <p>Humidity:</p>
+          </div>
+          <div class="col-2 float-left">
+            <h4 id="fourday"></h4>
+            <!--Icon-->
+            <p>Temperture:</p>
+            <p>Humidity:</p>
+          </div>
+          <div class="col-2 float-left">
+            <h4 id="fiveday"></h4>
+            <!--Icon-->
+            <p>Temperture:</p>
+            <p>Humidity:</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"
   ></script>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="assets/main.js"></script>
 </html>
