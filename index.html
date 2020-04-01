@@ -17,10 +17,10 @@
     <title>Weather Dashboard</title>
   </head>
 
-  <header>
+  <header class="navbar">
     <nav class="navbar">
-      <h2 class="display-4 align-center">
-        <img class="icon" src="assets/images/headerStormIcon.png" />Weather
+      <h2 class="display-4">
+        <img class="icon span-2" src="assets/images/headerStormIcon.png" />Weather
         Dashboard
         <img class="icon" src="assets/images/headerSunnyIcon.png" />
       </h2>
@@ -31,9 +31,11 @@
     <div class="container">
       <div class="col-3 float-left">
         <h1>Search for a City</h1>
-        <form>
-          <input type="text" />
-          <button>Search</button>
+        <form class="example">
+          <input type="text" placeholder="Search.." id="cityNameSearch" />
+          <button id="searchBtn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
         </form>
         <br />
         <h2>Recently Searched</h2>
@@ -52,14 +54,12 @@
       <div class="col-8">
         <div class="card">
           <h3 id="date"></h3>
-          <h1>Todays Weather in City</h1>
-          <br />
-          <br />
-          <!--Image of the weather-->
-          <h2>Temperture:</h2>
-          <h4>Humidity:</h4>
-          <h4>windSpeed:</h4>
-          <h4>UV index:</h4>
+          <h1 id="city"></h2>
+          <img id="weatherIcon">
+          <h4 id="temp">Temperture:</h2>
+          <h4 id="humidity">Humidity:</h4>
+          <h4 id="windSpeed">windSpeed:</h4>
+          <h4 id= "uvindex">UV index:</h4>
         </div>
         <br />
         <div class="col-12">

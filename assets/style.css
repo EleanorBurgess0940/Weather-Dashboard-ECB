@@ -1,12 +1,10 @@
 img {
   max-height: 50px;
 }
-h2 {
-  text-align: center;
-}
+
 header {
   width: 100%;
-  text-align: center;
+  align-content: center;
   background-color: lightskyblue;
   border-bottom: 10px solid black;
 }
@@ -17,4 +15,8 @@ header {
 
 body {
   background-color: blue;
+}
+
+.navbar {
+  margin: 0 auto;
 }
