@@ -30,13 +30,13 @@ $(document).ready(function() {
 
 var apiKey = "3c6fea3acc237375fd52d7b6d98475c0";
 var cityName = "Philadelphia";
-var onedayURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
+var oneDayQueryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
 
 $.ajax({
-  url: onedayURL,
+  url: oneDayQueryURL,
   method: "GET"
 }).then(function(response) {
-  console.log(onedayURL);
+  console.log(oneDayQueryURL);
   console.log(response);
   console.log(response.weather[0].icon);
   var iconCode = response.weather[0].icon;
@@ -46,4 +46,14 @@ $.ajax({
   $("#temp").html("Temperature: " + response.main.temp);
   $("#humidity").html("Humidity: " + response.main.humidity + "%");
   $("#windSpeed").html("Wind Speed: " + response.wind.speed + " mph");
+  var { lon } = response.coord;
+  var { lat } = response.coord;
+  var uvQueryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  $.ajax({
+    url: uvQueryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+    $("#uvIndex").html("UV Index: " + response.value);
+  });
 });
