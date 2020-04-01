@@ -31,14 +31,12 @@ $(document).ready(function() {
 var apiKey = "3c6fea3acc237375fd52d7b6d98475c0";
 var cityName = "Philadelphia";
 var oneDayQueryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
+var fiveDayQueryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=${apiKey}`;
 
 $.ajax({
   url: oneDayQueryURL,
   method: "GET"
 }).then(function(response) {
-  console.log(oneDayQueryURL);
-  console.log(response);
-  console.log(response.weather[0].icon);
   var iconCode = response.weather[0].icon;
   var iconURL = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
   $("#weatherIcon").attr("src", iconURL);
@@ -56,4 +54,22 @@ $.ajax({
     console.log(response);
     $("#uvIndex").html("UV Index: " + response.value);
   });
+});
+
+$.ajax({
+  url: fiveDayQueryURL,
+  method: "GET"
+}).then(function(response) {
+  console.log(response);
+  $("#tempTwo").html("Temperature: " + response.list[0].main.temp);
+  $("#tempThree").html("Temperature: " + response.list[1].main.temp);
+  $("#tempFour").html("Temperature: " + response.list[2].main.temp);
+  $("#tempFive").html("Temperature: " + response.list[3].main.temp);
+  $("#tempSix").html("Temperature: " + response.list[4].main.temp);
+
+  $("#humidTwo").html("Humidity: " + response.list[0].main.humidity + "%");
+  $("#humidThree").html("Humidity: " + response.list[1].main.humidity + "%");
+  $("#humidFour").html("Humidity: " + response.list[2].main.humidity + "%");
+  $("#humidFive").html("Humidity: " + response.list[3].main.humidity + "%");
+  $("#humidSix").html("Humidity: " + response.list[4].main.humidity + "%");
 });
