@@ -16,90 +16,126 @@
     <link rel="stylesheet" href="assets/style.css" />
     <title>Weather Dashboard</title>
   </head>
-
-  <header class="navbar">
-    <nav class="navbar">
-      <h2 class="display-4">
-        <img class="icon span-2" src="assets/images/headerStormIcon.png" />Weather
-        Dashboard
-        <img class="icon" src="assets/images/headerSunnyIcon.png" />
-      </h2>
-    </nav>
-  </header>
-
   <body>
-    <div class="container">
+    <header class="navbar">
+      <nav class="navbar">
+        <h2 class="display-4">
+          <img
+            class="icon"
+            src="assets/images/headerStormIcon.png"
+            alt="Storm Icon"
+          />Weather Dashboard
+          <img
+            class="icon"
+            src="assets/images/headerSunnyIcon.png"
+            alt="sunny Icon"
+          />
+        </h2>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <div class="leftside">
       <div class="col-3 float-left">
-        <h1>Search for a City</h1>
-        <form class="example">
-          <input type="text" placeholder="Search.." id="cityNameSearch" />
-          <button id="searchBtn" type="submit">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
+        <div class="card">
+          <form>
+            <h3>Search for a City</h3>
+            <input type="text" placeholder="Search.." id="cityNameSearch" />
+            <button id="searchBtn" type="button">Search</button>
+          </form>
+        </div>
         <br />
-        <h2>Recently Searched</h2>
-        <h4>one</h4>
-        <h4>two</h4>
-        <h4>three</h4>
+        <div class="card">
+          <h2>Current Location:</h2>
+          <btn class="span" id="currentCity">Current City</btn>
+        </div>
         <br />
-        <h2>Popular Destinations</h2>
-        <h4>Miami</h4>
-        <h4>Philadelphia</h4>
-        <h4>Paris</h4>
-        <h4>London</h4>
+        <div class="card">
+          <h2>Recently Searched</h2>
+          <h4>one</h4>
+          <h4>two</h4>
+          <h4>three</h4>
+        </div>
+        <br />
+        <div class="card">
+          <h2>Popular Destinations</h2>
+          <h4>Miami</h4>
+          <h4>Philadelphia</h4>
+          <h4>Paris</h4>
+          <h4>London</h4>
+        </div>
       </div>
     </div>
     <div class="container">
-      <div class="col-8">
+      <div class="col-12">
         <div class="card">
-          <h3 id="date"></h3>
-          <h1 id="city"></h2>
-          <img id="weatherIcon">
-          <h4 id="temp">Temperture:</h2>
-          <h4 id="humidity">Humidity:</h4>
-          <h4 id="windSpeed">windSpeed:</h4>
-          <h4 id= "uvIndex">UV index:</h4>
+          <h3 id="date">Date</h3>
+          <h1 id="city">City</h1>
+          <img id="weatherIcon" alt="weather Icon" src="assets/main.js" />
+          <h4 id="temp">Temp</h4>
+          <h4 id="humidity">Humidity</h4>
+          <h4 id="windSpeed">WindSpeed</h4>
+          <h4 id="uvIndex">uvIndex</h4>
+          <h4 id="feelsLike">feelsLike</h4>
         </div>
         <br />
-        <div class="ard">
-          <div class="ccol-12">
-          <h1>Future Forecast</h1>
-          <div class="card-deck">
-          <div class="col-2 float-left">
-            <h4 id="oneday"></h4>
-            <img id="iconCodeTwo">
-            <p id="tempTwo"></p>
-            <p id="humidTwo"></p>
-          </div>
-          <div class="col-2 float-left">
-            <h4 id="twoday"></h4>
-            <img id="iconCodeThree">
-            <p id="tempThree"></p>
-            <p id="humidThree"></p>
-          </div>
-          <div class="col-2 float-left">
-            <h4 id="threeday"></h4>
-            <img id="iconCodeFour">
-            <p id="tempFour"></p>
-            <p id="humidFour"></p>
-          </div>
-          <div class="col-2 float-left">
-            <h4 id="fourday"></h4>
-            <img id="iconCodeFive">
-            <p id="tempFive"></p>
-            <p id="humidFive"></p>
-          </div>
-          <div class="col-2 float-left">
-            <h4 id="fiveday"></h4>
-            <img id="iconCodeSix">
-            <p id="tempSix"></p>
-            <p id="humidSix"></p>
+        <div class="card">
+          <div class="col-12">
+            <h1>Future Forecast</h1>
+            <div class="card-deck">
+              <div class="col-2 float-left">
+                <h4 id="oneday">One Day</h4>
+                <img id="iconCodeTwo" alt="weather Icon" src="assets/main.js" />
+                <p id="tempTwo">Temp</p>
+                <p id="humidTwo">Humid</p>
+              </div>
+              <div class="col-2 float-left">
+                <h4 id="twoday">Two Day</h4>
+                <img
+                  id="iconCodeThree"
+                  alt="weather Icon"
+                  src="assets/main.js"
+                />
+                <p id="tempThree">Temp</p>
+                <p id="humidThree">Humid</p>
+              </div>
+              <div class="col-2 float-left">
+                <h4 id="threeday">Two Day</h4>
+                <img
+                  id="iconCodeFour"
+                  alt="weather Icon"
+                  src="assets/main.js"
+                />
+                <p id="tempFour">Temp</p>
+                <p id="humidFour">Humid</p>
+              </div>
+              <div class="col-2 float-left">
+                <h4 id="fourday">Two Day</h4>
+                <img
+                  id="iconCodeFive"
+                  alt="weather Icon"
+                  src="assets/main.js"
+                />
+                <p id="tempFive">Temp</p>
+                <p id="humidFive">Humid</p>
+              </div>
+              <div class="col-2 float-left">
+                <h4 id="fiveday">Two Day</h4>
+                <img id="iconCodeSix" alt="weather Icon" src="assets/main.js" />
+                <p id="tempSix">Temp</p>
+                <p id="humidSix">Humid</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script
+    language="JavaScript"
+    src="http://www.geoplugin.net/javascript.gp"
+    type="text/javascript"
+  ></script>
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
