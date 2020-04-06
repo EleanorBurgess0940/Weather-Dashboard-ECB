@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="assets/style.css" />
     <title>Weather Dashboard</title>
   </head>
+
   <body>
+    <!--The header of the page-->
     <header class="navbar">
       <nav class="navbar">
-        <h2 class="display-4">
+        <h2>
           <img
             class="icon"
             src="assets/images/headerStormIcon.png"
@@ -34,12 +36,16 @@
         </h2>
       </nav>
     </header>
+
     <br />
     <br />
+
+    <!--The left side of the screen column-->
     <div class="leftside">
       <div class="col-3 float-left">
         <div class="card">
           <form>
+            <!--Search Bar-->
             <h3>Search for a City</h3>
             <input type="text" placeholder="Search" id="cityNameSearch" />
             <br />
@@ -49,17 +55,23 @@
           </form>
         </div>
         <br />
+
+        <!--Current location Card-->
         <div class="card">
           <h2 class="">Current Location:</h2>
           <btn class="span" id="currentCity">Current City</btn>
         </div>
         <br />
+
+        <!--Recently Searched Card-->
         <div class="card">
           <h2 class="heading">Recently Searched</h2>
           <div id="searchHistoryList"></div>
           <button id="clearBtn" type="button">Clear Recent Searches</button>
         </div>
         <br />
+
+        <!--Popular Destinations-->
         <div class="card">
           <h2>Popular Destinations</h2>
           <button class="newCityBtn">Orlando</button>
@@ -69,6 +81,10 @@
         </div>
       </div>
     </div>
+
+    <!--Right Side of the Screen column-->
+
+    <!--Todays Weather-->
     <div class="container">
       <div class="col-12">
         <div class="card">
@@ -82,6 +98,8 @@
           <h4 id="feelsLike">feelsLike</h4>
         </div>
         <br />
+
+        <!--Five Day Forecast-->
         <div class="card">
           <div class="col-12">
             <h1>Future Forecast</h1>
@@ -103,7 +121,7 @@
                 <p id="humidThree">Humid</p>
               </div>
               <div class="col-2 float-left">
-                <h4 id="threeday">Two Day</h4>
+                <h4 id="threeday">three Day</h4>
                 <img
                   id="iconCodeFour"
                   alt="weather Icon"
@@ -113,7 +131,7 @@
                 <p id="humidFour">Humid</p>
               </div>
               <div class="col-2 float-left">
-                <h4 id="fourday">Two Day</h4>
+                <h4 id="fourday">four Day</h4>
                 <img
                   id="iconCodeFive"
                   alt="weather Icon"
@@ -123,7 +141,7 @@
                 <p id="humidFive">Humid</p>
               </div>
               <div class="col-2 float-left">
-                <h4 id="fiveday">Two Day</h4>
+                <h4 id="fiveday">five Day</h4>
                 <img id="iconCodeSix" alt="weather Icon" src="assets/main.js" />
                 <p id="tempSix">Temp</p>
                 <p id="humidSix">Humid</p>
@@ -134,6 +152,8 @@
       </div>
     </div>
   </body>
+
+  <!--Scripts-->
   <script src="http://www.geoplugin.net/javascript.gps"></script>
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
