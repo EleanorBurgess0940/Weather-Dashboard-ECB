@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--Basic header with links to Bootstrap and Stylesheer-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -40,29 +41,31 @@
         <div class="card">
           <form>
             <h3>Search for a City</h3>
-            <input type="text" placeholder="Search.." id="cityNameSearch" />
-            <button id="searchBtn" type="button">Search</button>
+            <input type="text" placeholder="Search" id="cityNameSearch" />
+            <br />
+            <button id="searchBtn" type="button">
+              Search
+            </button>
           </form>
         </div>
         <br />
         <div class="card">
-          <h2>Current Location:</h2>
+          <h2 class="">Current Location:</h2>
           <btn class="span" id="currentCity">Current City</btn>
         </div>
         <br />
         <div class="card">
-          <h2>Recently Searched</h2>
-          <h4>one</h4>
-          <h4>two</h4>
-          <h4>three</h4>
+          <h2 class="heading">Recently Searched</h2>
+          <div id="searchHistoryList"></div>
+          <button id="clearBtn" type="button">Clear Recent Searches</button>
         </div>
         <br />
         <div class="card">
           <h2>Popular Destinations</h2>
-          <h4>Miami</h4>
-          <h4>Philadelphia</h4>
-          <h4>Paris</h4>
-          <h4>London</h4>
+          <button class="newCityBtn">Orlando</button>
+          <button class="newCityBtn">Tokyo</button>
+          <button class="newCityBtn">Paris</button>
+          <button class="newCityBtn">London</button>
         </div>
       </div>
     </div>
@@ -82,7 +85,7 @@
         <div class="card">
           <div class="col-12">
             <h1>Future Forecast</h1>
-            <div class="card-deck">
+            <div class="card-deck justify-content-center">
               <div class="col-2 float-left">
                 <h4 id="oneday">One Day</h4>
                 <img id="iconCodeTwo" alt="weather Icon" src="assets/main.js" />
@@ -131,11 +134,7 @@
       </div>
     </div>
   </body>
-  <script
-    language="JavaScript"
-    src="http://www.geoplugin.net/javascript.gp"
-    type="text/javascript"
-  ></script>
+  <script src="http://www.geoplugin.net/javascript.gps"></script>
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
