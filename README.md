@@ -28,6 +28,8 @@ I would love to add more functionality to this website. One example would be may
 
 # Pictures
 
+![MainPage](./assets/images/mainPage.PNG)
+
 # Link to the page
 
 https://eleanorburgess0940.github.io/Weather-Dashboard-ECB/
