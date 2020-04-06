@@ -25,6 +25,7 @@ body {
   background-attachment: fixed;
 }
 
+/*These i would like to delete but they are important*/
 .navbar {
   margin: 0 auto;
 }
@@ -37,6 +38,7 @@ h3 {
   text-align: center;
 }
 
+/*styling of the cards and the card deck*/
 .card {
   background-color: lightskyblue;
   border: 5px dashed black;
